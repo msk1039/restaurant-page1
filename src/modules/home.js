@@ -11,7 +11,7 @@ function createAboutSection() {
     const para = document.createElement('p');
     para.classList.add('section-description');
     para.textContent =
-      'This is the type of restaurant which serves the food you love. We have a wide range of food items to choose from.';
+      'This is the type of Canteen which serves the food you love. We have a wide range of food items to choose from.';
   
     about.appendChild(para);
     return about;
