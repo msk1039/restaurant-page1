@@ -1,10 +1,11 @@
-function createAboutSection() {
+function createAboutSection(){
   const about = document.createElement("section");
   about.classList.add("section");
 
+
   const title = document.createElement("h2");
   title.classList.add("section-title");
-  title.textContent = "we serve the taste you love🥰";
+  title.textContent = "we serve the taste you love";
 
   about.appendChild(title);
 
