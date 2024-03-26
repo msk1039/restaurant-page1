@@ -152,39 +152,39 @@ function loadMenu() {
   setBtnActive("menu");
 
   const foods = [
-    createFood("./images/vadapav.jpeg", "vadapav", "10 Rs", "vadapav","1"),
+    createFood("./dist/images/vadapav.jpeg", "vadapav", "10 Rs", "vadapav","1"),
     createFood(
-      "./images/cold-coffee.avif",
+      "./dist/images/cold-coffee.avif",
       "cold coffie",
       "30 Rs",
       "cold coffie","2"
     ),
     createFood(
-      "./images/chicken-biryani.jpeg",
+      "./dist/images/chicken-biryani.jpeg",
       "chicken biryani",
       "200 Rs",
       "chicken biryani","3"
     ),
-    createFood("./images/sandwich.jpeg", "sandwich", "50 Rs", "sandwich","4"),
+    createFood("./dist/images/sandwich.jpeg", "sandwich", "50 Rs", "sandwich","4"),
     createFood(
-      "./images/sandwich-corn.jpeg",
+      "./dist/images/sandwich-corn.jpeg",
       "Corn sandwich",
       "60 Rs",
       "Corn sandwich","5"
     ),
     createFood(
-      "./images/shezwan-sandwich.jpeg",
+      "./dist/images/shezwan-sandwich.jpeg",
       "shezwan sandwich",
       "70 Rs",
       "shezwan sandwich","6"
     ),
-    createFood("./images/pizza.jpeg", "pizza", "90 Rs", "pizza","7"),
+    createFood("./dist/images/pizza.jpeg", "pizza", "90 Rs", "pizza","7"),
     createFood(
-      "./images/cheese-pizza.jpeg",
+      "./dist/images/cheese-pizza.jpeg",
       "pizza-cheese",
       "100 Rs",
       "pizza-cheese","8"),
-    createFood("./images/burger.jpeg", "burger", "50 Rs", "burger","9"),
+    createFood("./dist/images/burger.jpeg", "burger", "50 Rs", "burger","9"),
   ];
 
   foods.forEach((food) => {
