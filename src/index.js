@@ -3,6 +3,7 @@ import loadHome from "./modules/home";
 import loadMenu from "./modules/menu2";
 import loadContact from "./modules/contact";
 
+
 init();
 
 function addNavEvents() {
@@ -10,9 +11,12 @@ function addNavEvents() {
   const menuBtn = document.getElementById("menu");
   const contactBtn = document.getElementById("contact");
 
+
   homeBtn.addEventListener("click", loadHome);
   menuBtn.addEventListener("click", loadMenu);
   contactBtn.addEventListener("click", loadContact);
+
+  
 }
 function init() {
   loadPage();
@@ -30,3 +34,5 @@ document.getElementById("tab-content").onmousemove = (e) => {
     card.style.setProperty("--mouse-y", `${y}px`);
   }
 };
+
+

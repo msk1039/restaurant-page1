@@ -31,10 +31,11 @@ function createFood(src, text, price, alt) {
 }
 
 function loadMenu() {
-  const content = document.getElementById("tab-content");
+  const content = document.getElementById("tab-content1");
 
   content.classList.add("grid-lay");
   content.classList.remove("flex-lay");
+  content.classList.remove("home-lay");
 
   content.textContent = "";
 

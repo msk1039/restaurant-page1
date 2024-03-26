@@ -56,6 +56,7 @@ function loadContact() {
   const content = document.getElementById("tab-content");
   content.classList.add("flex-lay");
   content.classList.remove("grid-lay");
+  content.classList.remove("home-lay");
   content.textContent = "";
 
   setBtnActive("contact");

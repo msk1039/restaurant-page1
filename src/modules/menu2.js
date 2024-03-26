@@ -6,9 +6,64 @@ function setBtnActive(id) {
   homeBtn.classList.add("active");
 }
 
-function createFood(src, text, price, alt) {
+function displayCheckout(text,price){
+  wrapper.classList.add('active-popup');
+  const pay = document.getElementById("pay");
+  const bill = document.getElementById("bill");
+  const order = document.getElementById("order");
+
+  order.textContent = `${text}`;
+
+  bill.textContent = `Bill: ${price}`;
+  pay.textContent = 'Pay';
+
+
+}
+
+
+function createFood(src, text, price, alt, num) {
   const food = document.createElement("div");
+  // food.onclick = displayCheckout(text,price);
+  food.onclick = function(price,text){ 
+    wrapper.classList.add('active-popup');
+    console.log(`${price}`);
+
+    const bill = document.getElementById('bill');
+    const order = document.getElementById('order');
+
+    order.textContent = `${text}`;
+
+    bill.textContent = `Bill: ${price}`;
+    
+
+
+};
+  // food.addEventListener('click',displayCheckout(text,price));
+//  food.setAttribute('onclick',displayCheckout(text,price));
+//  food.setAttribute('onclick',(price,text)=>{ 
+//     wrapper.classList.add('active-popup');
+//     const pay = document.querySelector('.pay');
+//     const bill = document.querySelector('.bill');
+//     const order = document.querySelector('.order');
+
+//     order.textContent = `${text}`;
+
+//     bill.textContent = `Bill: ${price}`;
+//     pay.textContent = 'Pay';
+
+
+
+// });
+
+
+  // const food2 = document.createElement("div");
   food.classList.add("card");
+  food.classList.add(`${num}`);
+  
+  // food.classList.add("btnLogin-popup");
+
+  
+
 
   const cardcontent = document.createElement("div");
   cardcontent.classList.add("card-content");
@@ -61,6 +116,7 @@ function createFood(src, text, price, alt) {
 
   food.appendChild(cardcontent);
 
+
   /*   const img = document.createElement('img');
     img.setAttribute('src', src);
     img.setAttribute('alt', alt);
@@ -81,7 +137,6 @@ function createFood(src, text, price, alt) {
     food.appendChild(description);
 
    */
-
   return food;
 }
 
@@ -90,51 +145,53 @@ function loadMenu() {
 
   content.classList.add("grid-lay");
   content.classList.remove("flex-lay");
+  content.classList.remove("home-lay");
 
   content.textContent = "";
 
   setBtnActive("menu");
 
   const foods = [
-    createFood("./images/vadapav.jpeg", "vadapav", "10 Rs", "vadapav"),
+    createFood("./images/vadapav.jpeg", "vadapav", "10 Rs", "vadapav","1"),
     createFood(
       "./images/cold-coffee.avif",
       "cold coffie",
       "30 Rs",
-      "cold coffie",
+      "cold coffie","2"
     ),
     createFood(
       "./images/chicken-biryani.jpeg",
       "chicken biryani",
       "200 Rs",
-      "chicken biryani",
+      "chicken biryani","3"
     ),
-    createFood("./images/sandwich.jpeg", "sandwich", "50 Rs", "sandwich"),
+    createFood("./images/sandwich.jpeg", "sandwich", "50 Rs", "sandwich","4"),
     createFood(
       "./images/sandwich-corn.jpeg",
       "Corn sandwich",
       "60 Rs",
-      "Corn sandwich",
+      "Corn sandwich","5"
     ),
     createFood(
       "./images/shezwan-sandwich.jpeg",
       "shezwan sandwich",
       "70 Rs",
-      "shezwan sandwich",
+      "shezwan sandwich","6"
     ),
-    createFood("./images/pizza.jpeg", "pizza", "90 Rs", "pizza"),
+    createFood("./images/pizza.jpeg", "pizza", "90 Rs", "pizza","7"),
     createFood(
       "./images/cheese-pizza.jpeg",
       "pizza-cheese",
       "100 Rs",
-      "pizza-cheese",
-    ),
-    createFood("./images/burger.jpeg", "burger", "50 Rs", "burger"),
+      "pizza-cheese","8"),
+    createFood("./images/burger.jpeg", "burger", "50 Rs", "burger","9"),
   ];
 
   foods.forEach((food) => {
     content.appendChild(food);
   });
+ 
+
 }
 
 export default loadMenu;
