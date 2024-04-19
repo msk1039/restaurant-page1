@@ -26,6 +26,9 @@ function createAboutSection(){
   login.classList.add("login-page");
   signup.classList.add("signup-page");
 
+  login.setAttribute("href","./login-signup/login.html");
+  signup.setAttribute("href","./login-signup/signup.html");
+
   buttons.appendChild(login);
   buttons.appendChild(signup);
   about.appendChild(buttons);
