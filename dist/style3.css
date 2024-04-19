@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 .wrapper{
-    position: absolute;
+    position: fixed;
     z-index: 2;
-    top: 30%;
+    top: 20%;
     left: 35%;
     width: 400px;
     height: 440px;
    
-    background-color: #14181b8e;
+    background-color: #6f7b864f;
     border: 2px solid rgba(255,255,255,0.5);
     border-radius: 20px;
     backdrop-filter: blur(20px); 
@@ -66,7 +66,7 @@
     right:0;
     width: 45px;
     height: 45px;
-    background: #162938;
+    background: #ff0000de;
     font-size: 2em;
     color:#fff;
     display:flex;
@@ -176,4 +176,10 @@
 }
 .login-register p a:hover{
     text-decoration: underline;
+}
+ .backgrounddim{
+    filter: blur(10px);
+
+    transition: transform .5s ease, height .2s ease;
+
 }

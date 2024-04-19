@@ -3,6 +3,7 @@ const wrapper = document.querySelector('.wrapper');
 // const registerLink = document.querySelector('.register-link');
 // const btnPopup = document.querySelector('.card');
 const iconClose = document.querySelector('.icon-close');
+const background = document.getElementById("content");
 
 
 // registerLink.addEventListener('click', () => {
@@ -19,4 +20,5 @@ const iconClose = document.querySelector('.icon-close');
 
 iconClose.addEventListener('click', () => {
     wrapper.classList.remove('active-popup');
+    background.classList.remove('backgrounddim')
 });

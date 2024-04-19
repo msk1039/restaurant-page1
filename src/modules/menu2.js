@@ -11,6 +11,8 @@ function displayCheckout(text,price){
   const pay = document.getElementById("pay");
   const bill = document.getElementById("bill");
   const order = document.getElementById("order");
+  const background = document.getElementById("content");
+
 
   order.textContent = `${text}`;
 
@@ -27,6 +29,8 @@ function createFood(src, text, price, alt, num) {
   food.onclick = function(price,text){ 
     wrapper.classList.add('active-popup');
     console.log(`${price}`);
+    const background = document.getElementById("content");
+    background.classList.add('backgrounddim');
 
     const bill = document.getElementById('bill');
     const order = document.getElementById('order');

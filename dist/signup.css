@@ -1,0 +1,16 @@
+.login-signup-buttons{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+
+}
+.login-signup-buttons a{
+    height: 50px;
+    background-color: #4759ff;
+    width: 100px;
+    border-radius: 10px;
+}
+.login-signup-buttons a:hover{
+    background-color:blue;
+}

@@ -33,14 +33,25 @@ function createMain(id) {
   main.setAttribute("id", id);
   return main;
 }
-function createFooter(id, text) {
+function createFooter(id, text , link) {
   const footer = document.createElement("footer");
   footer.setAttribute("id", id);
-  const h3 = document.createElement("h3");
+  const h3 = document.createElement("a");
   h3.textContent = text;
+  h3.setAttribute("href",link);
   footer.appendChild(h3);
   return footer;
 }
+
+function createTestimonial(){
+
+  const testContainer = document.createElement("div");
+  testContainer.classList.add("testContainer");
+  
+
+
+}
+
 function loadPage() {
   const content = document.getElementById("content");
   // header
@@ -53,7 +64,7 @@ function loadPage() {
   const tabContent = createMain("tab-content");
   content.appendChild(tabContent);
   // footer
-  const footer = createFooter("footer", "Made by msk1039");
+  const footer = createFooter("footer", "Made by msk1039","https://github.com/msk1039");
   content.appendChild(footer);
 }
 
